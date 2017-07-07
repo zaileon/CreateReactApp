@@ -24,10 +24,10 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 */
 
-node('master') {
+pipeline {
 
     agent { docker 'node:6.3' }
-    
+
     currentBuild.result = "SUCCESS"
 
     try {
