@@ -26,7 +26,8 @@ THE SOFTWARE.
 
 node('master') {
 
-
+    agent { docker 'node:6.3' }
+    
     currentBuild.result = "SUCCESS"
 
     try {
