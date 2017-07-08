@@ -12,9 +12,9 @@
 node {
     checkout scm
 
-    env.PATH = "${tool 'Maven 3.5.0'}/bin:${env.PATH}"
+    env.PATH = "${tool 'docker'}/bin:${env.PATH}"
 
     stage('test') {
-        sh 'mvn -version'
+        sh 'docker -v'
     }
 }
