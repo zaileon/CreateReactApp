@@ -12,7 +12,7 @@
 node {
     checkout scm
 
-    env.PATH = "${tool 'docker'}/bin:${env.PATH}"
+    env.PATH = "/Users/junfeng/Library/Group Containers/group.com.docker/bin:${env.PATH}"
 
     stage('test') {
         sh 'docker -v'
