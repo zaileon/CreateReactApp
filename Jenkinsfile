@@ -15,6 +15,7 @@ node {
     env.PATH = "/Users/junfeng/Library/Group Containers/group.com.docker/bin:${env.PATH}"
 
     stage('test') {
+        sh 'echo $PATH'
         sh 'docker -v'
     }
 }
