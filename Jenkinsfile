@@ -1,10 +1,12 @@
 pipeline {
+    tools {
+        nodejs: 'node8'
+    }
     agent any // { docker 'node:6.3' }
     stages {
-        stage('build') {
+        stage('Test') {
             steps {
-                echo "${env.PATH}"
-                sh 'ls -al'
+                sh 'npm test'
             }
         }
     }
