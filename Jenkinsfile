@@ -1,11 +1,17 @@
 pipeline {
-    agent any // { docker 'node:6.3' }
-    stages {
-        stage('build') {
-            steps {
-                echo "${env.PATH}"
-                sh 'ls -al'
-            }
-        }
+  agent {
+    docker {
+      image 'node:6.11.1'
     }
+    
+  }
+  stages {
+    stage('build') {
+      steps {
+        echo '"${env.PATH}"'
+        sh 'ls -al'
+        sh 'docker -v'
+      }
+    }
+  }
 }
