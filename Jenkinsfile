@@ -4,7 +4,7 @@ pipeline {
         stage('build') {
             steps {
                 echo "${env.PATH}"
-                sh 'ls'
+                sh 'ls -al'
             }
         }
     }
