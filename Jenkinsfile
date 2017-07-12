@@ -4,7 +4,6 @@ pipeline {
         stage('build') {
             steps {
                 echo "${env.PATH}"
-                sh 'docker -v'
             }
         }
     }
